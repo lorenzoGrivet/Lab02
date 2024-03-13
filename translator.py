@@ -38,7 +38,7 @@ class Translator:
 
     def handleWildCard(self,query,dizionario):
         # query is a string with a ? --> <par?la_aliena>
-        dacercare= query.replace("?",".")
+        #dacercare= query.replace("?",".")
         traduzione=dizionario.translateWordWildCard(query)
         return traduzione
         pass

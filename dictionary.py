@@ -14,11 +14,16 @@ class Dictionary:
 
     def translateWordWildCard(self,query):
         trad=""
+
         for a in self.dizionario.keys():
+            w = 0
             if len(query)==len(a):
-                for i in range(0,len(query)-1):
-                    if (query[i]==a[i]) or query[i]==".":
-                        trad=a
+                for i in range(0,len(query)):
+                    if (query[i]==a[i]) or query[i]=="?":
+                        w+=1
+
+            if w==len(query):
+                trad=a
 
         return self.dizionario[trad]
         pass
